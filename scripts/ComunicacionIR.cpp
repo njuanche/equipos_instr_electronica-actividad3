@@ -19,7 +19,7 @@ void loopComunicacionIR() {
 
     switch (valor) {
       case 0xFD02FF00:  // Botón signo +
-        Serial.println("Botón POWER: subir +1°C");
+        Serial.println("Botón +: subir +1°C");
         if (tempDeseada < 35.0) {
           tempDeseada += 1.0;
           Serial.print("Nueva temperatura deseada: ");
@@ -28,7 +28,7 @@ void loopComunicacionIR() {
         break;
 
       case 0x6798FF00:  // Botón signo -
-        Serial.println("Botón FUNC/STOP: bajar -1°C");
+        Serial.println("Botón -: bajar -1°C");
         if (tempDeseada > 15.0) {
           tempDeseada -= 1.0;
           Serial.print("Nueva temperatura deseada: ");
